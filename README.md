@@ -1,2 +1,2 @@
-# table-curds-app
-Table Curds App
+# table-cruds-app
+Table CRUDS App
