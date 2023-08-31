@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Journey</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+
+  <section class="container">
+
+    <!-- title  -->
+    <section class="head">
+      <h1>
+        <span style="color: #28A745;">C</span>
+        <span style="color: #007BFF;">R</span>
+        <span style="color: #FFC107;">U</span>
+        <span style="color: #DC3545;">D</span>
+        <span style="color: #17A2B8;">S</span>
+      </h1>
+      <h2>
+        <span style="color: #28A745;">Create</span>
+        <span style="color: #007BFF;">Read</span>
+        <span style="color: #FFC107;">Update</span>
+        <span style="color: #DC3545;">Delete</span>
+        <span style="color: #17A2B8;">Search</span>
+      </h2>
+    </section>
+
+    <!-- operation  -->
+
+    <section>
+      <div style="display: flex;">
+        <div class="group">
+          <input type="text" placeholder="Title" id="title">
+          <input type="text" placeholder="Taxes" id="taxes">
+          <button type="submit" id="submit-btn" onclick="createProduct()">Submit</button>
+        </div>
+
+        <div class="group">
+          <input type="text" placeholder="Category" id="category">
+          <input type="text" placeholder="Ads" id="ads">
+          <input type="text" placeholder="Search" id="search">
+        </div>
+
+        <div class="group">
+          <input type="text" placeholder="Price" id="price">
+          <input type="text" placeholder="Count" id="count">
+          <button id="search-by-name">Search By Name</button>
+        </div>
+
+        <div class="group">
+          <input type="text" placeholder="Discount" id="discount">
+          <input type="text" placeholder="Total" id="total" readonly>
+          <button id="search-by-category">Search By Category</button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- table  -->
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Taxes</th>
+            <th>Ads</th>
+            <th>Total</th>
+            <th>Category</th>
+            <th colspan="2">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="data-body">
+        </tbody>
+      </table>
+    </section>
+
+  </section>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

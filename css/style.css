@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui;
+  background-color: #e9eae9;
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+  margin-top: 5vh;
+}
+
+.head {
+  margin-bottom: 50px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.head h1 {
+  font-size: 50px;
+}
+
+input {
+  width: 98.3%;
+  height: 40px;
+  outline: 0;
+  border: 0;
+  margin: 7px 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: rgba(128, 128, 128, 0.5);
+  cursor: pointer;
+}
+
+input:focus {
+  background-color: #f2f3f7;
+  transform: scale(1.02);
+}
+
+.group1 input {
+  width: 20%;
+}
+
+.group1 input:not(:last-child) {
+  margin-right: 15px;
+}
+
+.total {
+  background-color: #e45562;
+  color: #fff;
+}
+.total::placeholder {
+  color: #fff;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  height: 50px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.5s;
+  margin: 7px 0;
+}
+
+button:hover {
+  background-color: #28a745;
+  letter-spacing: 1.5px;
+}
+
+button.delete-all:hover {
+  background-color: #e45562;
+  letter-spacing: 1.5px;
+}
+
+.group2 {
+  display: flex;
+}
+.group2 button {
+  width: 53%;
+}
+.group2 input {
+  width: 40%;
+  margin-right: 15px;
+}
+
+.filter {
+  display: flex;
+}
+
+.filter input {
+  margin-right: 15px;
+}
+
+.filter button {
+  width: 30%;
+}
+.filter button:hover {
+  background-color: #17a2b8;
+  letter-spacing: 1.2px;
+}
+
+.filter button:not(:last-child) {
+  margin-right: 10px;
+}
+
+table {
+  border: 2px solid rgb(224, 223, 223);
+  border-collapse: collapse;
+  text-align: center;
+  background-color: #f2f3f7;
+  margin-top: 30px;
+}
+
+td,
+th {
+  width: 120px;
+  height: 30px;
+  border: 2px solid rgb(224, 223, 223);
+  padding: 5px;
+}
+
+td svg {
+  cursor: pointer;
+}
+
+.count-placeholder-color::placeholder {
+  color: #fff;
+}

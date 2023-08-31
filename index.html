@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Journey</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+
+  <section class="container">
+
+    <!-- title  -->
+    <section class="head">
+      <h1>
+        <span style="color: #28A745;">C</span>
+        <span style="color: #007BFF;">R</span>
+        <span style="color: #FFC107;">U</span>
+        <span style="color: #DC3545;">D</span>
+        <span style="color: #17A2B8;">S</span>
+      </h1>
+      <h2>
+        <span style="color: #28A745;">Create</span>
+        <span style="color: #007BFF;">Read</span>
+        <span style="color: #FFC107;">Update</span>
+        <span style="color: #DC3545;">Delete</span>
+        <span style="color: #17A2B8;">Search</span>
+      </h2>
+    </section>
+
+    <!-- operation  -->
+
+    <section class="inputs">
+      <div>
+        <input type="text" placeholder="Title" id="title">
+      </div>
+      <div style="display: flex; width: 100%;" class="group1">
+        <input onkeyup="getTotal()" type="number" placeholder="Price" id="price">
+        <input onkeyup="getTotal()" type="number" placeholder="Taxes" id="taxes">
+        <input onkeyup="getTotal()" type="number" placeholder="Ads" id="ads">
+        <input onkeyup="getTotal()" type="number" placeholder="Discount" id="discount">
+        <input class="total" type="number" placeholder="Total" id="total" readonly>
+      </div>
+      <div class="group2">
+        <input type="number" placeholder="Count" id="count">
+        <input type="text" placeholder="Category" id="category">
+        <button type="button" id="create-btn">Create</button>
+      </div>
+    </section>
+
+    <section class="filter">
+      <input onkeyup="doSearch(this.value)" type="text" id="search" placeholder="Search">
+      <button onclick="getSearchMode(this.id)" id="search-by-title">Search By Title</button>
+      <button onclick="getSearchMode(this.id)" id="search-by-category"> Search By Category</button>
+    </section>
+
+    <section id="delete-all">
+    </section>
+
+    <!-- table  -->
+    <section>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Taxes</th>
+            <th>Ads</th>
+            <th>Discount</th>
+            <th>Total</th>
+            <th>Category</th>
+            <th>Date</th>
+            <th colspan="2">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="products-list">
+          <tr>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+
+            <td>
+              <svg onclick="updateProduct()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#007BFF"
+                class="bi bi-pencil-square" viewBox="0 0 16 16">
+                <path
+                  d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z">
+                </path>
+                <path fill-rule="evenodd"
+                  d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z">
+                </path>
+              </svg>
+            </td>
+            <td>
+              <svg onclick="deleteProduct()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#DC3545"
+                class="bi bi-trash" viewBox="0 0 16 16">
+                <path
+                  d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z">
+                </path>
+                <path
+                  d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z">
+                </path>
+              </svg>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </section>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
